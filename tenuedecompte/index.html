@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Semaine 13</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!--lien vers le CDN de Bootstrap-->
+
+</head>
+
+<body>
+
+
+
+<div ng-app="app">
+    <div ng-controller="appCtrl">
+	<div class="row">
+		<div class="col-md-6">
+		<div id="un">
+			<input ng-model="valeur" placeholder="dépense" class ="input"/>
+			<button ng-click="addDepense()">Ajouter dépense</button>
+			<ul>
+				<li ng-repeat="depense in depenses">
+					{{ depense.valeur }} <span ng-click="rmDepense($index)" class ="delete">X</span>
+				</li>
+			</ul>
+			<strong>Total des dépenses : {{ total }}</strong>
+		</div>
+		
+		<div id="deux">
+			<input ng-model="tache" placeholder="tache" class ="input"/>
+			 <a class="delete" href="" data-ng-click="clearSearch()">X</a>
+			<button ng-click="addTache()">Ajouter une tache</button>
+			<ul>	
+				<li ng-repeat="gain in liste">
+					{{ gain.tache }} <span ng-click="del($index)" class ="delete">X</span>
+				</li>
+			</ul>
+			<strong>Nombre de tâche(s): {{total2}}</strong>
+		</div>
+	<p id ="copie">{{copie}}</p>	
+		
+	</div>
+	
+	
+	
+	
+	<div class="col-md-6">
+		<div id ="note">
+
+			<h2>Mes Notes</h2>
+
+		<p><textarea ng-model="message" cols="40" rows="8"></textarea></p>
+
+			<p>
+				<button ng-click="sauvegarder()">Sauvegarder</button>
+				<button ng-click="effacer()">Effacer</button>
+			</p>
+
+			<p>Nombre de caractères: <span ng-bind="nbrLettre()"></span></p>
+			<p ng-bind="message" class ="texteBis"></p>
+		</div>
+	
+	</div>
+</div>	
+	
+	
+	
+	
+	
+	
+	</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "WildBasic";
+    src: url('font/WildBasic.ttf');
+}
+
+
+input {
+    width: 4em;
+}
+span {
+    cursor: pointer;
+}
+.row {
+	padding:50px;
+
+}
+#un {
+	padding-top:20px;
+	padding-left:20px;
+	border:2px solid brown;
+	margin:20px;
+	box-shadow: 0px 0px 15px orange;
+}
+#deux {
+	padding-top:20px;
+	padding-left:20px;
+	border:2px solid brown;
+	margin:20px;
+	box-shadow: 0px 0px 15px orange;
+}
+.delete {
+	font-weight:bold;
+	color:red;
+}
+.texteBis {
+	word-wrap: break-word;
+	width:400px;
+	font-size:20px;
+	font-family:WildBasic;
+	color:brown;
+}
+body{
+		background-image:url(img/paper.jpg);
+}
+.input{
+	width:150px;
+}
+#copie {
+	word-wrap: break-word;
+	width:400px;
+	font-size:20px;
+	margin:20px;
+}
+#note {
+	padding-left:20px;
+	border:2px solid brown;
+	box-shadow: 0px 0px 15px orange;
+}
